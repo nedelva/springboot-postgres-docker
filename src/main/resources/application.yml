@@ -1,0 +1,30 @@
+spring:
+  profiles:
+    active: standalone # default profile
+
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
+    enabled: true
+
+---
+spring:
+  config:
+    activate:
+      on-profile: standalone
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mydb
+    username: dbuser
+    password: dbpass
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10
+
+---
+spring:
+  config:
+    activate:
+      on-profile: external
+
+  datasource:
+    jndi-name: java:comp/env/jdbc/MyAppDS
