@@ -19,8 +19,5 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet id="create-customers-seq" author="you">
-        <createSequence sequenceName="customers_seq" startValue="1" incrementBy="1"/>
-    </changeSet>
 
 </databaseChangeLog>
