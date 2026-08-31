@@ -5,8 +5,8 @@ The project demonstrates how to use Spring Boot to create a simple Web app that
 * uses Testcontainers to create an integration test that loads the table and adds another record using JPA
 
 ### Spring Initializr settings
-The project was generated with Spring Boot 3.4.4, Maven support and Java version 21.
-It also has a number of dependencies from the get go:
+The project was generated with Spring Boot 3.4.4 (and later upgraded to 4.1.1), Maven support and Java version 25.
+It also has a number of dependencies from the get-go:
 * Spring Web (for RESTful controller that serves JSON)
 * Docker Compose Support (will be started by `mvn spring:boot`)
 * Spring Data JPA
